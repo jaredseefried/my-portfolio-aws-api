@@ -67,3 +67,12 @@ functions:
       - http:
           path: posts/{id}
           method: put
+  delete:
+    # Defines an HTTP API endpoint that calls the main function in delete.js
+    # - path: url path is /notes/{id}
+    # - method: DELETE request
+    handler: delete.main
+    events:
+      - http:
+          path: posts/{id}
+          method: delete
