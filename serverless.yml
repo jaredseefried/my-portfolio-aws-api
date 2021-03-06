@@ -40,6 +40,7 @@ functions:
       - http:
           path: posts
           method: post
+          authorizer: aws_iam
   get:
     # Defines an HTTP API endpoint that calls the main function in get.js
     # - path: url path is /notes/{id}
@@ -49,6 +50,7 @@ functions:
       - http:
           path: posts/{id}
           method: get
+          authorizer: aws_iam
   list:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /notes
@@ -58,6 +60,7 @@ functions:
       - http:
           path: posts
           method: get
+          authorizer: aws_iam
   update:
     # Defines an HTTP API endpoint that calls the main function in update.js
     # - path: url path is /notes/{id}
@@ -67,6 +70,7 @@ functions:
       - http:
           path: posts/{id}
           method: put
+          authorizer: aws_iam
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
     # - path: url path is /notes/{id}
@@ -76,3 +80,4 @@ functions:
       - http:
           path: posts/{id}
           method: delete
+          authorizer: aws_iam
